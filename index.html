@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Prototype</title>
+
+<style media="screen">
+	html, body {
+		padding: 0;
+		margin: 0;
+		background-color: #ededed;
+	}
+	#iphone {
+		background-image: url('images/iphone.png');
+		width: 491px;
+		height: 937px;
+		position: relative;
+		left: calc(50% - 240px);
+		margin-top: 20px;
+	}
+	#iphone_container {
+		border: 0;
+		width: 395px;
+		height: 667px;
+		left: 60px;
+		top: 110px;
+		position: absolute;
+		overflow: hidden;
+	}
+</style>
+
+</head>
+
+<body>
+	<div id="iphone">
+		<iframe id="iphone_container" src="0.html"></iframe>
+	</div>
+</body>
+
+</html>

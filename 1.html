@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+    <style media="screen">
+		html, body {
+        	padding: 0;
+        	margin: 0;
+        }
+        ::-webkit-scrollbar {
+      		display: none;
+      	}
+		img {
+			display: block;
+		}
+		.toaster {
+			position: fixed;
+    		top: -145px;
+		}
+		.show {
+			top: 0;
+		}
+    </style>
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body>
+	<img src="images/dropdown.png" usemap="#Map2" class="toaster">
+    <map name="Map2">
+      <area shape="rect" coords="225,73,352,113" href="3.html">
+      <area shape="rect" coords="93,74,219,113" href="0.html">
+    </map>
+	<img src="images/size-selected-1.jpg">
+	<a id="point"><img src="images/size-selected-2.jpg" usemap="#Map"></a>
+		<map name="Map" id="link">
+			<area shape="rect" coords="6,357,368,406">
+		</map>
+	<a id="point2"><img src="images/size-selected-3.jpg"></a>
+  
+	<script>
+		function scrollToAnchor(aid){
+			var aTag = $("#"+ aid);
+			$('html,body').animate({scrollTop: aTag.offset().top},'medium');
+		}
+
+		$("#link").click(function() {
+			scrollToAnchor('point2');
+			$('.toaster').addClass('show');
+		});
+	</script>
+	  
+</body>
+
+</html>
